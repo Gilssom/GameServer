@@ -8,58 +8,47 @@
 #include <future>
 #include "ThreadManager.h"
 
-bool IsCheck(int n)
-{
-	if (n < 2)
-		return false;
+#include "RefCountable.h"
 
-	for (int i = 2; i * i <= n; i++)
+using KnightRef = TSharedPtr<class Knight>;
+
+class Knight : public RefCountable
+{
+public:
+	Knight()
 	{
-		if (n % i == 0)
-			return false;
+		cout << "Knight()" << endl;
 	}
 
-	return true;
-}
+	~Knight()
+	{
+		cout << "~Knight()" << endl;
+	}
+
+	void SetTarget(KnightRef target)
+	{
+		_target = target;
+	}
+
+	KnightRef _target = nullptr;
+};
 
 int main()
 {
-	// Thread Count = 2
-	// Thread A = 0 ~ 500000
-	// Thread B = 500001 ~ 1000000
+	// 1) 이미 만들어진 클래스 대상으로는 사용이 불가능하다.
+	// 2) 순환 (Cycle) 문제
 
-	unsigned int MAX_THREAD_COUNT = thread::hardware_concurrency();
-	cout << "Max Thread Count : " << MAX_THREAD_COUNT << endl;
-	const int MAX_NUMBER = 100'0000;
-	const int NUMBER_HALF_COUNT = MAX_THREAD_COUNT - 5;
-	cout << "Use Thread Count : " << NUMBER_HALF_COUNT << endl;
-	const int MAX_NUMBER_HALF = MAX_NUMBER / NUMBER_HALF_COUNT;
+	KnightRef k1(new Knight);
+	k1->ReleaseRef();	
+	KnightRef k2(new Knight);
+	k2->ReleaseRef();
 
-	atomic<int> result = 0;
+	k1->SetTarget(k2);
+	k2->SetTarget(k1);
 
-	const int64 beginTick = ::GetTickCount64();
-	for (int i = 0; i < NUMBER_HALF_COUNT; i++)
-	{
-		GThreadManager->Launch([=, &result]
-			{
-				int localCount = 0;
+	k1->SetTarget(nullptr);
+	k2->SetTarget(nullptr);
 
-				int start = MAX_NUMBER_HALF * i;
-				int end = start + MAX_NUMBER_HALF;
-
-				for (int j = start; j < end; j++)
-				{
-					if (IsCheck(j))
-						localCount++;
-				}
-
-				result.fetch_add(localCount);
-			});
-	}
-
-	GThreadManager->Join();
-
-	const int64 endTick = ::GetTickCount64();
-	cout << "Total Result : " << result.load() << endl;
-	cout << "Elapsed Time : " << (endTick - beginTick) << "ms" << endl;
+	k1 = nullptr;
+	k2 = nullptr;
 }

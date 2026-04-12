@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\Git Fork\CPP_GameServer\GameServer\Binary\Debug\DummyClient.exe</FullPath>
+      <FullPath>E:\Git Fork\GameServer\GameServer\Binary\Debug\DummyClient.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
