@@ -1,0 +1,7 @@
+E:\Git Fork\CPP_GameServer\GameServer\ServerCore\CoreGlobal.cpp;E:\Git Fork\CPP_GameServer\GameServer\ServerCore\x64\Release\CoreGlobal.obj
+E:\Git Fork\CPP_GameServer\GameServer\ServerCore\CorePch.cpp;E:\Git Fork\CPP_GameServer\GameServer\ServerCore\x64\Release\CorePch.obj
+E:\Git Fork\CPP_GameServer\GameServer\ServerCore\CoreTLS.cpp;E:\Git Fork\CPP_GameServer\GameServer\ServerCore\x64\Release\CoreTLS.obj
+E:\Git Fork\CPP_GameServer\GameServer\ServerCore\DeadLockProfiler.cpp;E:\Git Fork\CPP_GameServer\GameServer\ServerCore\x64\Release\DeadLockProfiler.obj
+E:\Git Fork\CPP_GameServer\GameServer\ServerCore\Lock.cpp;E:\Git Fork\CPP_GameServer\GameServer\ServerCore\x64\Release\Lock.obj
+E:\Git Fork\CPP_GameServer\GameServer\ServerCore\pch.cpp;E:\Git Fork\CPP_GameServer\GameServer\ServerCore\x64\Release\pch.obj
+E:\Git Fork\CPP_GameServer\GameServer\ServerCore\ThreadManager.cpp;E:\Git Fork\CPP_GameServer\GameServer\ServerCore\x64\Release\ThreadManager.obj

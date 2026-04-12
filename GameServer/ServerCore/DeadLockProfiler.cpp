@@ -1,0 +1,129 @@
+#include "pch.h"
+#include "DeadLockProfiler.h"
+
+/*
+*  Dead Lock Profiler
+*/
+void DeadLockProfiler::PushLock(const char* name)
+{
+	LockGurad guard(_lock);
+
+	// Id 를 찾거나 발급
+	int32 lockId = 0;
+
+	auto findIt = _nameToId.find(name);
+	if (findIt == _nameToId.end())
+	{
+		lockId = static_cast<int32>(_nameToId.size());
+		_nameToId[name] = lockId;
+		_idToName[lockId] = name;
+	}
+	else
+	{
+		lockId = findIt->second;
+	}
+
+	// 잡고 있는 Lock 이 있었다면
+	if (!_lockStack.empty())
+	{
+		// 기존에 발견되지 않은 케이스라면 데드락 여부 판별
+		const int32 prevId = _lockStack.top();
+		if (lockId != prevId)
+		{
+			set<int32>& history = _lockHistory[prevId];
+			if (history.find(lockId) == history.end())
+			{
+				history.insert(lockId);
+				CheckCycle();
+			}
+		}
+	}
+
+	_lockStack.push(lockId);
+}
+
+void DeadLockProfiler::PopLock(const char* name)
+{
+	LockGurad guard(_lock);
+
+	if (_lockStack.empty())
+		CRASH("Multiple unlock");
+
+	int32 lockId = _nameToId[name];
+	if (_lockStack.top() != lockId)
+		CRASH("Invaild unlock");
+
+	_lockStack.pop();
+}
+
+void DeadLockProfiler::CheckCycle()
+{
+	const int32 lockCount = static_cast<int32>(_nameToId.size());
+	_discoveredOrder = vector<int32>(lockCount, -1);
+	_discoveredCount = 0;
+	_finished = vector<bool>(lockCount, false);
+	_parent = vector<int32>(lockCount, -1);
+
+	for (int32 lockId = 0; lockId < lockCount; lockId++)
+	{
+		DFS(lockId);
+	}
+
+	// 연산이 끝났으면 정리한다.
+	_discoveredOrder.clear();
+	_finished.clear();
+	_parent.clear();
+}
+
+void DeadLockProfiler::DFS(int32 here)
+{
+	if (_discoveredOrder[here] != -1)
+		return;
+
+	_discoveredOrder[here] = _discoveredCount++;
+
+	// 모든 인접한 정점 순회
+	auto findIt = _lockHistory.find(here);
+	if (findIt == _lockHistory.end())
+	{
+		_finished[here] = true;
+		return;
+	}
+
+	set<int32>& nextSet = findIt->second;
+	for (int32 there : nextSet)
+	{
+		// 방문한 적이 없다면 방문한다.
+		if (_discoveredOrder[there] == -1)
+		{
+			_parent[there] = here;
+			DFS(there);
+			continue;
+		}
+
+		// here 가 there 보다 먼저 발견되었다면, there 는 here 의 후손이다. (순방향 간선)
+		if (_discoveredOrder[here] < _discoveredOrder[there])
+		{
+			continue;
+		}
+
+		// 순방향이 아니고, DFS(there) 가 아직 종료되지 않았다면, there 는 here 의 선조이다. (역방향 간선)
+		if (!_finished[there])
+		{
+			printf("%s -> %s\n", _idToName[here], _idToName[there]);
+
+			int32 now = here;
+			while (true)
+			{
+				printf("%s -> %s\n", _idToName[_parent[now]], _idToName[now]);
+				now = _parent[now];
+				if (now == there)
+					break;
+			}
+
+			CRASH("Dead Lock Detected");
+		}
+	}
+
+	_finished[here] = true;
+}

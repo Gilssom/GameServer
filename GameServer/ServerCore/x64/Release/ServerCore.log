@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  CoreGlobal.cpp
+  CorePch.cpp
+  CoreTLS.cpp
+  DeadLockProfiler.cpp
+  Lock.cpp
+  ThreadManager.cpp
+  ServerCore.vcxproj -> E:\Git Fork\CPP_GameServer\GameServer\Libraries\Release\ServerCore.lib
