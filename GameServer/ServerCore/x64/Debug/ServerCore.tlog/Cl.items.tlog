@@ -1,8 +1,10 @@
+E:\Git Fork\GameServer\GameServer\ServerCore\Allocator.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\Allocator.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\CoreGlobal.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\CoreGlobal.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\CorePch.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\CorePch.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\CoreTLS.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\CoreTLS.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\DeadLockProfiler.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\DeadLockProfiler.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\Lock.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\Lock.obj
+E:\Git Fork\GameServer\GameServer\ServerCore\Memory.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\Memory.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\pch.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\pch.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\RefCountable.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\RefCountable.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\ThreadManager.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\ThreadManager.obj

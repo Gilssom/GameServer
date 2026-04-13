@@ -9,46 +9,48 @@
 #include "ThreadManager.h"
 
 #include "RefCountable.h"
+#include "Memory.h"
+#include "Allocator.h"
 
-using KnightRef = TSharedPtr<class Knight>;
+class Player
+{
+public:
+	Player() { }
+	virtual ~Player() { }
+};
 
-class Knight : public RefCountable
+class Knight : public Player
 {
 public:
 	Knight()
 	{
-		cout << "Knight()" << endl;
+		cout << "Knight" << endl;
 	}
 
 	~Knight()
 	{
-		cout << "~Knight()" << endl;
+		cout << "~Knight" << endl;
 	}
 
-	void SetTarget(KnightRef target)
+	/*static void* operator new(size_t size)
 	{
-		_target = target;
+		cout << "knight new !" << size << endl;
+		void* ptr = ::malloc(size);
+		return ptr;
 	}
 
-	KnightRef _target = nullptr;
+	static void operator delete(void* ptr)
+	{
+		cout << "knight delete !" << endl;
+		::free(ptr);
+	}*/
+
+	int _hp = 100;
+	int _mp = 100;
 };
 
 int main()
 {
-	// 1) 이미 만들어진 클래스 대상으로는 사용이 불가능하다.
-	// 2) 순환 (Cycle) 문제
+	Vector<Knight> v(100);
 
-	KnightRef k1(new Knight);
-	k1->ReleaseRef();	
-	KnightRef k2(new Knight);
-	k2->ReleaseRef();
-
-	k1->SetTarget(k2);
-	k2->SetTarget(k1);
-
-	k1->SetTarget(nullptr);
-	k2->SetTarget(nullptr);
-
-	k1 = nullptr;
-	k2 = nullptr;
 }

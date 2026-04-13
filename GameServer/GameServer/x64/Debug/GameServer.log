@@ -1,1 +1,3 @@
-﻿  GameServer.vcxproj -> E:\Git Fork\GameServer\GameServer\Binary\Debug\GameServer.exe
+﻿  pch.cpp
+  GameServer.cpp
+  GameServer.vcxproj -> E:\Git Fork\GameServer\GameServer\Binary\Debug\GameServer.exe
