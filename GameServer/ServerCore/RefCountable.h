@@ -3,7 +3,6 @@
 /*
 *   Ref Counting
 */
-
 class RefCountable
 {
 public:
