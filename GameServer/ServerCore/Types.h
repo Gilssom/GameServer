@@ -18,3 +18,5 @@ using Mutex			= std::mutex;
 using CondVar		= std::condition_variable;
 using UniqueLock	= std::unique_lock<std::mutex>;
 using LockGurad		= std::lock_guard<std::mutex>;
+
+//#define _STOMP

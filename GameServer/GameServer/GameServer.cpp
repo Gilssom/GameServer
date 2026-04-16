@@ -12,60 +12,51 @@
 #include "Memory.h"
 #include "Allocator.h"
 
+using TL = TypeList<class Player, class Knight, class Mage, class Archer>;
+
 class Player
 {
 public:
-	Player() { }
+	Player()
+	{
+		INIT_TL(Player);
+	}
 	virtual ~Player() { }
+
+	DECLARE_TL
 };
 
 class Knight : public Player
 {
 public:
-	Knight()
-	{
-		cout << "Knight" << endl;
-	}
+	Knight() { INIT_TL(Knight); }
+};
 
-	~Knight()
-	{
-		cout << "~Knight" << endl;
-	}
+class Mage : public Player
+{
+public:
+	Mage() { INIT_TL(Mage); }
+};
 
-	/*static void* operator new(size_t size)
-	{
-		cout << "knight new !" << size << endl;
-		void* ptr = ::malloc(size);
-		return ptr;
-	}
-
-	static void operator delete(void* ptr)
-	{
-		cout << "knight delete !" << endl;
-		::free(ptr);
-	}*/
-
-	int _hp = 100;
-	int _mp = 100;
+class Archer : public Player
+{
+public:
+	Archer() { INIT_TL(Archer); }
 };
 
 int main()
 {
-	for (int32 i = 0; i < 5; i++)
+	/*{
+		Player* player = new Player();
+
+		bool canCast = CanCast<Knight*>(player);
+		Knight* knight = TypeCast<Knight*>(player);
+	}*/
+
 	{
-		GThreadManager->Launch([]()
-			{
-				while (true)
-				{
-					Vector<Knight> v(10);
+		shared_ptr<Knight> knight = MakeShared<Knight>();
 
-					Map<int32, Knight> m;
-					m[100] = Knight();
-
-					this_thread::sleep_for(10ms);
-				}
-			});
+		shared_ptr<Player> player = TypeCast<Player>(knight);
+		bool canCast = CanCast<Player>(knight);
 	}
-
-	GThreadManager->Join();
 }
