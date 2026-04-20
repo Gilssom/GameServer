@@ -197,7 +197,7 @@ bool CanCast(From* ptr)
 		return nullptr;
 
 	using TL = typename From::TL;
-	return TypeConversion<TL>::CanConvert(ptr->_typeId, IndexOf<TL, remove_pointer_t<To>>::value)
+	return TypeConversion<TL>::CanConvert(ptr->_typeId, IndexOf<TL, remove_pointer_t<To>>::value);
 }
 
 template<typename To, typename From>
@@ -207,7 +207,7 @@ bool CanCast(shared_ptr<From> ptr)
 		return nullptr;
 
 	using TL = typename From::TL;
-	return TypeConversion<TL>::CanConvert(ptr->_typeId, IndexOf<TL, remove_pointer_t<To>>::value)
+	return TypeConversion<TL>::CanConvert(ptr->_typeId, IndexOf<TL, remove_pointer_t<To>>::value);
 }
 #pragma endregion
 

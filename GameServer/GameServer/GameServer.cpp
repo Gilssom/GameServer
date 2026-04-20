@@ -8,55 +8,76 @@
 #include <future>
 #include "ThreadManager.h"
 
-#include "RefCountable.h"
-#include "Memory.h"
-#include "Allocator.h"
+#include <WinSock2.h>
+#include <MSWSock.h>
+#include <WS2tcpip.h>
+#pragma comment(lib, "ws2_32.lib")
 
-using TL = TypeList<class Player, class Knight, class Mage, class Archer>;
-
-class Player
+void HandleError(const char* cause)
 {
-public:
-	Player()
-	{
-		INIT_TL(Player);
-	}
-	virtual ~Player() { }
-
-	DECLARE_TL
-};
-
-class Knight : public Player
-{
-public:
-	Knight() { INIT_TL(Knight); }
-};
-
-class Mage : public Player
-{
-public:
-	Mage() { INIT_TL(Mage); }
-};
-
-class Archer : public Player
-{
-public:
-	Archer() { INIT_TL(Archer); }
-};
+	int32 errCode = ::WSAGetLastError();
+	cout << "Send Error Code = " << errCode << endl;
+}
 
 int main()
 {
-	/*{
-		Player* player = new Player();
+	WSAData wsaData;
+	if (::WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
+		return 0;
 
-		bool canCast = CanCast<Knight*>(player);
-		Knight* knight = TypeCast<Knight*>(player);
-	}*/
-
+	SOCKET serverSocket = ::socket(AF_INET, SOCK_DGRAM, 0);
+	if (serverSocket == INVALID_SOCKET)
 	{
-		shared_ptr<Knight> knight = MakeShared<Knight>();
-
-		shared_ptr<Player> player = TypeCast<Player>(knight);
-		bool canCast = CanCast<Player>(knight);
+		HandleError("Socket");
+		return 0;
 	}
+
+	SOCKADDR_IN serverAddr;
+	::memset(&serverAddr, 0, sizeof(serverAddr));
+	serverAddr.sin_family = AF_INET;
+	serverAddr.sin_addr.s_addr = ::htonl(INADDR_ANY);
+	serverAddr.sin_port = ::htons(7777);
+
+	if (::bind(serverSocket, (SOCKADDR*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR)
+	{
+		HandleError("Bind");
+		return 0;
+	}
+
+	while (true)
+	{
+		SOCKADDR_IN clientAddr;
+		::memset(&clientAddr, 0, sizeof(clientAddr));
+		int32 addrLen = sizeof(clientAddr);
+
+		this_thread::sleep_for(1s);
+
+		char recvBuffer[1000];
+
+		int32 recvLen = ::recvfrom(serverSocket, recvBuffer, sizeof(recvBuffer), 0,
+			(SOCKADDR*)&clientAddr, &addrLen);
+
+		if (recvLen <= 0)
+		{
+			HandleError("recv Error");
+			return 0;
+		}
+
+		cout << "Recv Data ! Data = " << recvBuffer << endl;
+		cout << "Recv Data ! Len = " << recvLen << endl;
+
+		int32 errorCode = ::sendto(serverSocket, recvBuffer, recvLen, 0,
+			(SOCKADDR*)&clientAddr, sizeof(clientAddr));
+
+		if (errorCode == SOCKET_ERROR)
+		{
+			HandleError("send Error");
+			return 0;
+		}
+
+		cout << "Send Data! Len = " << recvLen << endl;
+	}
+
+	// Winsock 종료
+	::WSACleanup();
 }
