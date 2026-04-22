@@ -21,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 212,
+          "DockedWidth": 138,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "DummyClient\\DummyClient.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\DummyClient\\DummyClient.cpp",
               "RelativeToolTip": "DummyClient\\DummyClient.cpp",
-              "ViewState": "AgIAAD4AAAAAAAAAAADwvzMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-20T07:39:29.492Z",
               "EditorCaption": ""
@@ -52,7 +52,7 @@
           ]
         },
         {
-          "DockedWidth": 192,
+          "DockedWidth": 266,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -63,7 +63,7 @@
               "RelativeDocumentMoniker": "GameServer\\GameServer.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\GameServer\\GameServer.cpp",
               "RelativeToolTip": "GameServer\\GameServer.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAADwv0kAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAAIcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-20T07:39:30.155Z",
               "EditorCaption": ""

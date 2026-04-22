@@ -1,2 +1,5 @@
 ﻿  GameServer.cpp
+E:\Git Fork\GameServer\GameServer\GameServer\GameServer.cpp(121,56): warning C4267: '인수': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/GameServer.cpp'을(를) 컴파일하는 중)
+  
   GameServer.vcxproj -> E:\Git Fork\GameServer\GameServer\Binary\Debug\GameServer.exe
