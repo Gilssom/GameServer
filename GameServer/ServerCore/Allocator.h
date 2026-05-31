@@ -52,12 +52,12 @@ public:
 	T* allocate(size_t count)
 	{
 		const int32 size = static_cast<int32>(count * sizeof(T));
-		return static_cast<T*>(x_alloc(size));
+		return static_cast<T*>(PoolAllocator::Alloc(size));
 	}
 
 	void deallocate(T* ptr, size_t count)
 	{
-		x_release(ptr);
+		PoolAllocator::Release(ptr);
 	}
 
 	bool operator==(const StlAllocator&) const noexcept { return true; }

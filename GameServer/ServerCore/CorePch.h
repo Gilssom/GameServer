@@ -10,7 +10,12 @@
 #include <iostream>
 using namespace std;
 
-#include "Lock.h"
+#include <WinSock2.h>
+#include <MSWSock.h>
+#include <WS2tcpip.h>
+#pragma comment(lib, "ws2_32.lib")
 
+#include "Lock.h"
 #include "ObjectPool.h"
 #include "TypeCast.h"
+#include "Memory.h"
