@@ -3,16 +3,64 @@
   "WorkspaceRootPath": "E:\\Git Fork\\GameServer\\GameServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\GameServer\\GameServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|solutionrelative:GameServer\\GameServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{374648FA-A2A8-4D99-97C8-4235C7877C5D}|DummyClient\\DummyClient.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\DummyClient\\DummyClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{374648FA-A2A8-4D99-97C8-4235C7877C5D}|DummyClient\\DummyClient.vcxproj|solutionrelative:DummyClient\\DummyClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Listener.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Listener.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|E:\\GIT FORK\\GAMESERVER\\GAMESERVER\\SERVERCORE\\TYPES.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|solutionrelative:SERVERCORE\\TYPES.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpEvent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\IocpEvent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\NetAddress.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\NetAddress.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\SocketUtils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\SocketUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\IocpCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\SocketUtils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\CorePch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CorePch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\NetAddress.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\NetAddress.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpEvent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -23,52 +71,24 @@
       "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CoreGlobal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\GameServer\\GameServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|solutionrelative:GameServer\\GameServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\NetAddress.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\NetAddress.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpEvent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\IocpEvent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpCore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\IocpCore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Listener.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Listener.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\NetAddress.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\NetAddress.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\RefCountable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\RefCountable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\SocketUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\ObjectPool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\ObjectPool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|E:\\GIT FORK\\GAMESERVER\\GAMESERVER\\SERVERCORE\\MEMORY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1300D246-92BD-4AE1-8FB1-AA83F86AA328}|GameServer\\GameServer.vcxproj|solutionrelative:SERVERCORE\\MEMORY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\CorePch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CorePch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{374648FA-A2A8-4D99-97C8-4235C7877C5D}|DummyClient\\DummyClient.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\DummyClient\\DummyClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{374648FA-A2A8-4D99-97C8-4235C7877C5D}|DummyClient\\DummyClient.vcxproj|solutionrelative:DummyClient\\DummyClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpCore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B0B2743-8ECC-46F8-BF47-B879A585D283}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\IocpCore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -77,18 +97,57 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 180,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 210,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
+              "Title": "RefCountable.h",
+              "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\RefCountable.h",
+              "RelativeDocumentMoniker": "ServerCore\\RefCountable.h",
+              "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\RefCountable.h",
+              "RelativeToolTip": "ServerCore\\RefCountable.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-01T10:48:15.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ObjectPool.h",
+              "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\ObjectPool.h",
+              "RelativeDocumentMoniker": "ServerCore\\ObjectPool.h",
+              "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\ObjectPool.h",
+              "RelativeToolTip": "ServerCore\\ObjectPool.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-01T10:06:04.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Service.h",
+              "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Service.h",
+              "RelativeDocumentMoniker": "ServerCore\\Service.h",
+              "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Service.h",
+              "RelativeToolTip": "ServerCore\\Service.h",
+              "ViewState": "AgIAADAAAAAAAAAAAAAtwEcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-01T09:43:45.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Listener.h",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Listener.h",
               "RelativeDocumentMoniker": "ServerCore\\Listener.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Listener.h",
               "RelativeToolTip": "ServerCore\\Listener.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-31T10:20:31.019Z",
               "EditorCaption": ""
@@ -101,124 +160,150 @@
               "RelativeDocumentMoniker": "ServerCore\\IocpEvent.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpEvent.h",
               "RelativeToolTip": "ServerCore\\IocpEvent.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-31T10:05:24.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "Types.h",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Types.h",
               "RelativeDocumentMoniker": "ServerCore\\Types.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Types.h",
               "RelativeToolTip": "ServerCore\\Types.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAtwBsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-30T10:17:17.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
               "Title": "DummyClient.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\DummyClient\\DummyClient.cpp",
               "RelativeDocumentMoniker": "DummyClient\\DummyClient.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\DummyClient\\DummyClient.cpp",
               "RelativeToolTip": "DummyClient\\DummyClient.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAE0AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-20T07:39:29.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "SocketUtils.h",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.h",
               "RelativeDocumentMoniker": "ServerCore\\SocketUtils.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.h",
               "RelativeToolTip": "ServerCore\\SocketUtils.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-31T09:00:21.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "NetAddress.h",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\NetAddress.h",
               "RelativeDocumentMoniker": "ServerCore\\NetAddress.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\NetAddress.h",
               "RelativeToolTip": "ServerCore\\NetAddress.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-31T09:00:33.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 21,
               "Title": "IocpCore.h",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpCore.h",
               "RelativeDocumentMoniker": "ServerCore\\IocpCore.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpCore.h",
               "RelativeToolTip": "ServerCore\\IocpCore.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-31T09:57:30.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Session.h",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.h",
               "RelativeDocumentMoniker": "ServerCore\\Session.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.h",
               "RelativeToolTip": "ServerCore\\Session.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAtwFUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-31T10:32:16.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Memory.h",
+              "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Memory.h",
+              "RelativeDocumentMoniker": "ServerCore\\Memory.h",
+              "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Memory.h",
+              "RelativeToolTip": "ServerCore\\Memory.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-01T10:05:32.588Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 224,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 194,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "Service.cpp",
+              "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Service.cpp",
+              "RelativeDocumentMoniker": "ServerCore\\Service.cpp",
+              "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Service.cpp",
+              "RelativeToolTip": "ServerCore\\Service.cpp",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAtwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-01T09:43:49.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Session.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.cpp",
               "RelativeDocumentMoniker": "ServerCore\\Session.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Session.cpp",
               "RelativeToolTip": "ServerCore\\Session.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAApwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-31T10:32:20.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Listener.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Listener.cpp",
               "RelativeDocumentMoniker": "ServerCore\\Listener.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\Listener.cpp",
               "RelativeToolTip": "ServerCore\\Listener.cpp",
-              "ViewState": "AgIAAD4AAAAAAAAAAAApwFQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-31T10:20:35.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "CoreGlobal.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\CoreGlobal.cpp",
               "RelativeDocumentMoniker": "ServerCore\\CoreGlobal.cpp",
@@ -231,33 +316,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
               "Title": "IocpEvent.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpEvent.cpp",
               "RelativeDocumentMoniker": "ServerCore\\IocpEvent.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpEvent.cpp",
               "RelativeToolTip": "ServerCore\\IocpEvent.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-31T10:05:28.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "SocketUtils.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.cpp",
               "RelativeDocumentMoniker": "ServerCore\\SocketUtils.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\SocketUtils.cpp",
               "RelativeToolTip": "ServerCore\\SocketUtils.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAiwEwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAtwEsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-31T09:00:39.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "NetAddress.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\NetAddress.cpp",
               "RelativeDocumentMoniker": "ServerCore\\NetAddress.cpp",
@@ -270,41 +355,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "CorePch.h",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\CorePch.h",
               "RelativeDocumentMoniker": "ServerCore\\CorePch.h",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\CorePch.h",
               "RelativeToolTip": "ServerCore\\CorePch.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-05-31T08:59:51.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameServer.cpp",
-              "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\GameServer\\GameServer.cpp",
-              "RelativeDocumentMoniker": "GameServer\\GameServer.cpp",
-              "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\GameServer\\GameServer.cpp",
-              "RelativeToolTip": "GameServer\\GameServer.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-20T07:39:30.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "IocpCore.cpp",
               "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpCore.cpp",
               "RelativeDocumentMoniker": "ServerCore\\IocpCore.cpp",
               "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\ServerCore\\IocpCore.cpp",
               "RelativeToolTip": "ServerCore\\IocpCore.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAtwB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAtwB8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-31T09:57:42.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameServer.cpp",
+              "DocumentMoniker": "E:\\Git Fork\\GameServer\\GameServer\\GameServer\\GameServer.cpp",
+              "RelativeDocumentMoniker": "GameServer\\GameServer.cpp",
+              "ToolTip": "E:\\Git Fork\\GameServer\\GameServer\\GameServer\\GameServer.cpp",
+              "RelativeToolTip": "GameServer\\GameServer.cpp",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-20T07:39:30.155Z",
               "EditorCaption": ""
             }
           ]
