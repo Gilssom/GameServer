@@ -2,6 +2,7 @@
 #include "IocpCore.h"
 #include "IocpEvent.h"
 #include "NetAddress.h"
+#include "RecvBuffer.h"
 
 class Service;
 
@@ -12,13 +13,18 @@ class Session : public IocpObject
 	friend class IocpCore;
 	friend class Service;
 
+	enum
+	{
+		BUFFER_SIZE = 0x10000, // 64kb
+	};
+
 public:
 	Session();
 	virtual ~Session();
 
 public:
 	/* 외부에서 사용 */
-	void				Send(BYTE* buffer, int32 len);
+	void				Send(SendBufferRef sendBuffer);
 	bool				Connect();
 	void				Disconnect(const WCHAR* cause);
 
@@ -43,12 +49,12 @@ private:
 	bool			RegisterConnect();
 	bool			RegisterDisconnect();
 	void			RegisterRecv();
-	void			RegisterSend(SendEvent* sendEvent);
+	void			RegisterSend();
 
 	void			ProcessConnect();
 	void			ProcessDisconnect();
 	void			ProcessRecv(int32 numOfBytes);
-	void			ProcessSend(SendEvent* sendEvent, int32 numOfBytes);
+	void			ProcessSend(int32 numOfBytes);
 
 	void			HandleError(int32 errorCode);
 
@@ -60,9 +66,6 @@ protected:
 	virtual void	OnDisconnected() { }
 
 public:
-	// TEMP
-	BYTE _recvBuffer[1000];
-
 	// Circular Buffer
 	//char _sendBuffer[1000];
 	//int32 _sendLen = 0;
@@ -77,12 +80,37 @@ private:
 	USE_LOCK;
 	
 	/* 수신 관련 */
+	RecvBuffer				_recvBuffer;
 
 	/* 송신 관련 */
+	Queue<SendBufferRef>	_sendQueue;
+	Atomic<bool>			_sendRegistered = false;
 
 private:
 	/* Iocp Event 재사용 관련 */
 	ConnectEvent		_connectEvent;
 	DisconnectEvent		_disconnectEvent;
 	RecvEvent			_recvEvent;
+	SendEvent			_sendEvent;
+};
+
+
+// Packet Session
+struct PacketHeader
+{
+	uint16 size;
+	uint16 id;		// protocol ID (ex. 1 = Login, 2 = 이동 요청)
+};
+
+class PacketSession : public Session
+{
+public:
+	PacketSession();
+	virtual ~PacketSession();
+
+	PacketSessionRef GetPacketSessionRef() { return static_pointer_cast<PacketSession>(shared_from_this()); }
+
+protected:
+	virtual int32	OnRecv(BYTE* buffer, int32 len) sealed;
+	virtual void	OnRecvPacket(BYTE* buffer, int32 len) abstract;
 };

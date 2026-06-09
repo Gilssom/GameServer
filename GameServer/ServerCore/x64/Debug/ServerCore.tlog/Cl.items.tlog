@@ -1,4 +1,6 @@
 E:\Git Fork\GameServer\GameServer\ServerCore\Allocator.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\Allocator.obj
+E:\Git Fork\GameServer\GameServer\ServerCore\BufferReader.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\BufferReader.obj
+E:\Git Fork\GameServer\GameServer\ServerCore\BufferWriter.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\BufferWriter.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\CoreGlobal.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\CoreGlobal.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\CorePch.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\CorePch.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\CoreTLS.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\CoreTLS.obj
@@ -11,7 +13,9 @@ E:\Git Fork\GameServer\GameServer\ServerCore\Memory.cpp;E:\Git Fork\GameServer\G
 E:\Git Fork\GameServer\GameServer\ServerCore\MemoryPool.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\MemoryPool.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\NetAddress.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\NetAddress.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\pch.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\pch.obj
+E:\Git Fork\GameServer\GameServer\ServerCore\RecvBuffer.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\RecvBuffer.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\RefCountable.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\RefCountable.obj
+E:\Git Fork\GameServer\GameServer\ServerCore\SendBuffer.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\SendBuffer.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\Service.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\Service.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\Session.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\Session.obj
 E:\Git Fork\GameServer\GameServer\ServerCore\SocketUtils.cpp;E:\Git Fork\GameServer\GameServer\ServerCore\x64\Debug\SocketUtils.obj

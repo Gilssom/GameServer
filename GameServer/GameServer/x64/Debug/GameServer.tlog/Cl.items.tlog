@@ -1,2 +1,5 @@
 E:\Git Fork\GameServer\GameServer\GameServer\GameServer.cpp;E:\Git Fork\GameServer\GameServer\GameServer\x64\Debug\GameServer.obj
+E:\Git Fork\GameServer\GameServer\GameServer\GameSession.cpp;E:\Git Fork\GameServer\GameServer\GameServer\x64\Debug\GameSession.obj
+E:\Git Fork\GameServer\GameServer\GameServer\GameSessionManager.cpp;E:\Git Fork\GameServer\GameServer\GameServer\x64\Debug\GameSessionManager.obj
 E:\Git Fork\GameServer\GameServer\GameServer\pch.cpp;E:\Git Fork\GameServer\GameServer\GameServer\x64\Debug\pch.obj
+E:\Git Fork\GameServer\GameServer\GameServer\ServerPacketHandler.cpp;E:\Git Fork\GameServer\GameServer\GameServer\x64\Debug\ServerPacketHandler.obj

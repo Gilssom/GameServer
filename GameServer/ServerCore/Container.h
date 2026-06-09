@@ -1,6 +1,7 @@
 #pragma once
 #include "Types.h"
 #include "Allocator.h"
+#include <array>
 #include <vector>
 #include <list>
 #include <queue>
@@ -12,6 +13,9 @@
 #include <functional>
 
 using namespace std;
+
+template<typename T, uint32 Size>
+using Array = array<T, Size>;
 
 template<typename T>
 using Vector = vector<T, StlAllocator<T>>;
