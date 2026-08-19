@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "configuration": "Release x64",
+  "environment": "Windows desktop loopback",
+  "scenarios": 8,
+  "passed": 8,
+  "server_alive_after_faults": true,
+  "server_stderr_bytes": 0,
+  "cases": [
+    "e2e",
+    "split2",
+    "split5",
+    "merge3",
+    "sizezero",
+    "oversize",
+    "partial-close",
+    "post-fault-e2e"
+  ]
+}

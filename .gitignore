@@ -1,6 +1,7 @@
 .vs/
 Binary/
 bin/
+build/
 obj/
 x64/
 Debug/
