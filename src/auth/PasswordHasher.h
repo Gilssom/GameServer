@@ -1,153 +1,115 @@
 #pragma once
 
+#include <Windows.h>
 #include <bcrypt.h>
 
-#pragma comment(lib, "bcrypt.lib")
+#include <array>
+#include <cstdint>
+#include <string>
+#include <string_view>
 
-namespace PasswordHasher
+namespace portfolio::auth
 {
-    constexpr ULONG SALT_SIZE = 16;
-    constexpr ULONG HASH_SIZE = 32;
-    constexpr ULONGLONG ITERATIONS = 210000;
-    constexpr WCHAR FORMAT_PREFIX[] = L"pbkdf2_sha256";
-
-    inline WCHAR ToHexDigit(BYTE value)
+    class PasswordHasher final
     {
-        return value < 10
-            ? static_cast<WCHAR>(L'0' + value)
-            : static_cast<WCHAR>(L'a' + value - 10);
-    }
+    public:
+        static constexpr std::uint64_t kIterations = 210000;
+        static constexpr std::size_t kSaltSize = 16;
+        static constexpr std::size_t kHashSize = 32;
 
-    inline String ToHex(const BYTE* data, size_t size)
-    {
-        String result(size * 2, L'0');
-        for (size_t i = 0; i < size; ++i)
+        static bool Hash(const std::string_view password, std::wstring& encoded)
         {
-            result[i * 2] = ToHexDigit(data[i] >> 4);
-            result[i * 2 + 1] = ToHexDigit(data[i] & 0x0F);
-        }
-        return result;
-    }
-
-    inline int32 FromHexDigit(WCHAR value)
-    {
-        if (value >= L'0' && value <= L'9') return value - L'0';
-        if (value >= L'a' && value <= L'f') return value - L'a' + 10;
-        if (value >= L'A' && value <= L'F') return value - L'A' + 10;
-        return -1;
-    }
-
-    template<size_t N>
-    bool FromHex(const String& text, BYTE(&output)[N])
-    {
-        if (text.size() != N * 2)
-            return false;
-
-        for (size_t i = 0; i < N; ++i)
-        {
-            const int32 high = FromHexDigit(text[i * 2]);
-            const int32 low = FromHexDigit(text[i * 2 + 1]);
-            if (high < 0 || low < 0)
+            std::array<std::uint8_t, kSaltSize> salt{};
+            std::array<std::uint8_t, kHashSize> hash{};
+            if (!BCRYPT_SUCCESS(BCryptGenRandom(nullptr, salt.data(),
+                static_cast<ULONG>(salt.size()), BCRYPT_USE_SYSTEM_PREFERRED_RNG)) ||
+                !Derive(password, salt, hash))
+            {
+                SecureZeroMemory(hash.data(), hash.size());
                 return false;
-            output[i] = static_cast<BYTE>((high << 4) | low);
-        }
-        return true;
-    }
-
-    inline bool Derive(
-        const string& password,
-        const BYTE* salt,
-        ULONG saltSize,
-        ULONGLONG iterations,
-        BYTE* output,
-        ULONG outputSize)
-    {
-        BCRYPT_ALG_HANDLE algorithm = nullptr;
-        const NTSTATUS openStatus = ::BCryptOpenAlgorithmProvider(
-            &algorithm,
-            BCRYPT_SHA256_ALGORITHM,
-            nullptr,
-            BCRYPT_ALG_HANDLE_HMAC_FLAG);
-        if (!BCRYPT_SUCCESS(openStatus))
-            return false;
-
-        const NTSTATUS deriveStatus = ::BCryptDeriveKeyPBKDF2(
-            algorithm,
-            reinterpret_cast<PUCHAR>(const_cast<char*>(password.data())),
-            static_cast<ULONG>(password.size()),
-            const_cast<PUCHAR>(salt),
-            saltSize,
-            iterations,
-            output,
-            outputSize,
-            0);
-        ::BCryptCloseAlgorithmProvider(algorithm, 0);
-        return BCRYPT_SUCCESS(deriveStatus);
-    }
-
-    inline bool Hash(const string& password, String& encoded)
-    {
-        if (password.empty())
-            return false;
-
-        BYTE salt[SALT_SIZE] = {};
-        BYTE hash[HASH_SIZE] = {};
-        const NTSTATUS randomStatus = ::BCryptGenRandom(
-            nullptr, salt, SALT_SIZE, BCRYPT_USE_SYSTEM_PREFERRED_RNG);
-
-        if (!BCRYPT_SUCCESS(randomStatus) ||
-            !Derive(password, salt, SALT_SIZE, ITERATIONS, hash, HASH_SIZE))
-        {
-            ::SecureZeroMemory(salt, sizeof(salt));
-            ::SecureZeroMemory(hash, sizeof(hash));
-            return false;
+            }
+            encoded = L"pbkdf2_sha256$" + std::to_wstring(kIterations) + L"$" +
+                ToHex(salt) + L"$" + ToHex(hash);
+            SecureZeroMemory(hash.data(), hash.size());
+            return true;
         }
 
-        encoded = FORMAT_PREFIX;
-        encoded += L"$" + std::to_wstring(ITERATIONS);
-        encoded += L"$" + ToHex(salt, SALT_SIZE);
-        encoded += L"$" + ToHex(hash, HASH_SIZE);
-        ::SecureZeroMemory(salt, sizeof(salt));
-        ::SecureZeroMemory(hash, sizeof(hash));
-        return true;
-    }
-
-    inline bool Verify(const string& password, const String& encoded)
-    {
-        const size_t first = encoded.find(L'$');
-        const size_t second = encoded.find(L'$', first + 1);
-        const size_t third = encoded.find(L'$', second + 1);
-        if (first == String::npos || second == String::npos ||
-            third == String::npos || encoded.substr(0, first) != FORMAT_PREFIX)
-            return false;
-
-        ULONGLONG iterations = 0;
-        for (size_t i = first + 1; i < second; ++i)
+        static bool Verify(const std::string_view password, const std::wstring_view encoded)
         {
-            if (encoded[i] < L'0' || encoded[i] > L'9')
+            const auto first = encoded.find(L'$');
+            const auto second = encoded.find(L'$', first + 1);
+            const auto third = encoded.find(L'$', second + 1);
+            if (first == std::wstring_view::npos || second == std::wstring_view::npos ||
+                third == std::wstring_view::npos || encoded.substr(0, first) != L"pbkdf2_sha256" ||
+                encoded.substr(first + 1, second - first - 1) != std::to_wstring(kIterations))
                 return false;
-            iterations = iterations * 10 + (encoded[i] - L'0');
+
+            std::array<std::uint8_t, kSaltSize> salt{};
+            std::array<std::uint8_t, kHashSize> expected{};
+            std::array<std::uint8_t, kHashSize> actual{};
+            if (!FromHex(encoded.substr(second + 1, third - second - 1), salt) ||
+                !FromHex(encoded.substr(third + 1), expected) || !Derive(password, salt, actual))
+                return false;
+
+            std::uint8_t difference = 0;
+            for (std::size_t index = 0; index < actual.size(); ++index)
+                difference |= static_cast<std::uint8_t>(actual[index] ^ expected[index]);
+            SecureZeroMemory(actual.data(), actual.size());
+            SecureZeroMemory(expected.data(), expected.size());
+            return difference == 0;
         }
-        if (iterations < 100000 || iterations > 1000000)
-            return false;
 
-        BYTE salt[SALT_SIZE] = {};
-        BYTE expected[HASH_SIZE] = {};
-        BYTE actual[HASH_SIZE] = {};
-        const bool parsed =
-            FromHex(encoded.substr(second + 1, third - second - 1), salt) &&
-            FromHex(encoded.substr(third + 1), expected);
-        const bool derived = parsed &&
-            Derive(password, salt, SALT_SIZE, iterations, actual, HASH_SIZE);
+    private:
+        template<std::size_t Size>
+        static bool Derive(const std::string_view password,
+            const std::array<std::uint8_t, kSaltSize>& salt,
+            std::array<std::uint8_t, Size>& output)
+        {
+            BCRYPT_ALG_HANDLE algorithm = nullptr;
+            if (!BCRYPT_SUCCESS(BCryptOpenAlgorithmProvider(
+                &algorithm, BCRYPT_SHA256_ALGORITHM, nullptr, BCRYPT_ALG_HANDLE_HMAC_FLAG)))
+                return false;
+            const NTSTATUS status = BCryptDeriveKeyPBKDF2(algorithm,
+                reinterpret_cast<PUCHAR>(const_cast<char*>(password.data())),
+                static_cast<ULONG>(password.size()), const_cast<PUCHAR>(salt.data()),
+                static_cast<ULONG>(salt.size()), kIterations, output.data(),
+                static_cast<ULONG>(output.size()), 0);
+            BCryptCloseAlgorithmProvider(algorithm, 0);
+            return BCRYPT_SUCCESS(status);
+        }
 
-        BYTE difference = 0;
-        if (derived)
-            for (size_t i = 0; i < HASH_SIZE; ++i)
-                difference |= actual[i] ^ expected[i];
+        template<std::size_t Size>
+        static std::wstring ToHex(const std::array<std::uint8_t, Size>& input)
+        {
+            constexpr wchar_t digits[] = L"0123456789abcdef";
+            std::wstring output(Size * 2, L'0');
+            for (std::size_t index = 0; index < Size; ++index)
+            {
+                output[index * 2] = digits[input[index] >> 4];
+                output[index * 2 + 1] = digits[input[index] & 0x0f];
+            }
+            return output;
+        }
 
-        ::SecureZeroMemory(salt, sizeof(salt));
-        ::SecureZeroMemory(expected, sizeof(expected));
-        ::SecureZeroMemory(actual, sizeof(actual));
-        return derived && difference == 0;
-    }
+        template<std::size_t Size>
+        static bool FromHex(const std::wstring_view input, std::array<std::uint8_t, Size>& output)
+        {
+            if (input.size() != Size * 2) return false;
+            const auto value = [](const wchar_t ch) -> int
+            {
+                if (ch >= L'0' && ch <= L'9') return ch - L'0';
+                if (ch >= L'a' && ch <= L'f') return ch - L'a' + 10;
+                if (ch >= L'A' && ch <= L'F') return ch - L'A' + 10;
+                return -1;
+            };
+            for (std::size_t index = 0; index < Size; ++index)
+            {
+                const int high = value(input[index * 2]);
+                const int low = value(input[index * 2 + 1]);
+                if (high < 0 || low < 0) return false;
+                output[index] = static_cast<std::uint8_t>((high << 4) | low);
+            }
+            return true;
+        }
+    };
 }
