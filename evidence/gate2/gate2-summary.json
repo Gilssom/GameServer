@@ -1,0 +1,49 @@
+{
+  "gate": "Gate 2 - Network Correctness",
+  "result": "PASS",
+  "executed_at": "2026-08-19T16:44:57+09:00",
+  "environment": {
+    "host": "127.0.0.1",
+    "port": 17777,
+    "configuration": "Release",
+    "platform": "x64",
+    "topology": "single Windows desktop, loopback"
+  },
+  "runs": {
+    "baseline": { "passed": 1, "total": 1 },
+    "network_cases": { "passed": 18, "total": 18, "repeats_per_case": 3 },
+    "regression_e2e": { "passed": 6, "total": 6 },
+    "all": { "passed": 25, "total": 25 }
+  },
+  "events": {
+    "wait_more_data_positive_buffer": 18,
+    "wait_more_data_zero_buffer": 0,
+    "invalid_header": 3,
+    "packet_too_large": 3,
+    "peer_closed_partial": 3,
+    "packet_complete": 50,
+    "packet_dispatch": 50
+  },
+  "errors": {
+    "NET_INVALID_PACKET_SIZE": 3,
+    "NET_PACKET_TOO_LARGE": 3,
+    "NET_INCOMPLETE_PACKET": 3
+  },
+  "isolation": {
+    "server_alive_before_controlled_stop": true,
+    "server_stderr_bytes": 0,
+    "protocol_hash_manifest_match": "8/8"
+  },
+  "binaries": [
+    {
+      "path": "<release-binary-directory>\\GameServer.exe",
+      "bytes": 1012736,
+      "sha256": "5FCAF40BD8FDA10E56ECBA203E3473369BA0FC043B38D8F2A49BF8C8AD5FD49F"
+    },
+    {
+      "path": "<release-binary-directory>\\DummyClient.exe",
+      "bytes": 973312,
+      "sha256": "0D1BD91FE6AFAC22F766425A5F57FD92DF14338B6B371A1F13463808AD09E629"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "gate": "Gate 3 - Database Reliability and Authentication Security",
+  "result": "PASS",
+  "executed_at": "2026-08-19T18:06:52+09:00",
+  "aggregate": {
+    "passed": 25,
+    "total": 25,
+    "primary_process_runs": 53,
+    "post_cleanup_process_runs": 26,
+    "actual_process_runs": 79,
+    "post_cleanup_regression": "12/12"
+  },
+  "cases": {
+    "invalid_db_credential": "3/3",
+    "authentication_rejection_equivalence": "6/6",
+    "sql_injection_shaped_login": "3/3",
+    "duplicate_signup_race_rounds": "3/3",
+    "duplicate_signup_clients": "24/24 expected outcomes",
+    "concurrent_e2e": "8/8",
+    "network_regression": "6/6"
+  },
+  "database": {
+    "product": "MySQL 8.0.45",
+    "schema": "GameDB",
+    "engine": "InnoDB",
+    "worker_count": 5,
+    "pool_size": 5,
+    "duplicate_rows_created": 0,
+    "expected_native_1062": 6,
+    "pool_unavailable_after_fix": 0,
+    "password_hash": { "algorithm": "pbkdf2_sha256", "iterations": 210000, "encoded_length": 118 }
+  },
+  "security": {
+    "invalid_credential_events": 9,
+    "external_message_for_existing_and_missing_account": "Invalid credentials",
+    "test_secret_exact_matches_in_evidence": 0,
+    "password_or_hash_logged": false
+  },
+  "isolation": {
+    "server_alive_before_controlled_stop": true,
+    "protocol_and_s1_hash_match": "8/8",
+    "network_regression_stderr_bytes": 0
+  },
+  "binaries": [
+    {
+      "path": "<release-binary-directory>\\GameServer.exe",
+      "bytes": 1016320,
+      "sha256": "3170A1BF819E9A5BCB5EC2EFB3C3941C043AAB948710353CB0D6451AD66C0B92"
+    },
+    {
+      "path": "<release-binary-directory>\\DummyClient.exe",
+      "bytes": 973312,
+      "sha256": "D4456FDA26DCE2B2642356885F20A9A1EE5BDC6F1528B4FE9730A2596722A8A1"
+    }
+  ]
+}
