@@ -1,42 +1,35 @@
-# Source and Publication Notice
+# 출처 및 공개 범위 안내
 
-## Public standalone implementation
+## 공개용 독립 구현
 
-The buildable source currently contained in `src/` was assembled as a separate,
-independent portfolio implementation. It does not include or require the
-ServerCore source from the private course study repository.
+현재 `src/`에 포함된 빌드 가능한 소스 코드는 포트폴리오 공개를 위해 별도로 독립 구현했습니다. 이 코드는 비공개 강의 학습 저장소의 ServerCore 소스를 포함하거나 의존하지 않습니다.
 
-The standalone implementation contains:
+독립 구현에는 다음 내용이 포함됩니다.
 
-- an IOCP completion loop and session lifecycle;
-- TCP stream framing and malformed-input isolation;
-- PBKDF2 password verification through Windows CNG;
-- an optional ODBC prepared-query authentication store;
-- a deterministic DummyClient regression runner.
+- IOCP 완료 처리 루프와 세션 생명주기 관리
+- TCP 스트림 패킷 조립과 비정상 입력 격리
+- Windows CNG를 이용한 PBKDF2 비밀번호 검증
+- ODBC 준비된 쿼리 방식의 선택적 인증 저장소
+- 동일 결과를 반복 재현할 수 있는 DummyClient 회귀 테스트 도구
 
-## Private learning foundation
+## 비공개 학습 프로젝트의 기반
 
-The earlier private project began as study work based on Rookiss's Inflearn
-course, "C++과 언리얼로 만드는 MMORPG 게임 개발 시리즈 Part4: 게임 서버":
+이전에 진행한 비공개 프로젝트는 Rookiss님의 인프런 강의 「C++과 언리얼로 만드는 MMORPG 게임 개발 시리즈 Part4: 게임 서버」를 기반으로 학습을 시작했습니다.
 
 https://www.inflearn.com/course/%EC%96%B8%EB%A6%AC%EC%96%BC-3d-mmorpg-4
 
-No explicit permission to relicense or redistribute that complete course-derived
-codebase as open source was identified. The course foundation, its ServerCore,
-and its Git history are therefore excluded from this repository.
+해당 강의 기반 전체 코드에 오픈소스 라이선스를 다시 부여하거나 이를 재배포할 수 있다는 명시적인 허가는 확인하지 못했습니다. 따라서 강의 기반 코드, 해당 ServerCore 및 원래 Git 이력은 이 공개 저장소에서 제외했습니다.
 
-## Historical reports
+## 기존 프로젝트의 검증 보고서
 
-The Gate 2 through Gate 4 reports document tests performed on the larger private
-study project and are retained as engineering evidence. They are clearly
-separate from the standalone 8-scenario regression implemented here.
+Gate 2부터 Gate 4까지의 보고서는 더 큰 규모의 비공개 학습 프로젝트에서 수행한 테스트를 기록한 기술 자료입니다. 해당 보고서의 결과는 현재 공개용 독립 서버에서 수행하는 8개 시나리오 회귀 테스트와 구분해 표기했습니다.
 
-## Excluded material
+## 공개 저장소에서 제외한 항목
 
-- course sample code and the private ServerCore;
-- Protobuf and RapidXML source or generated artifacts;
-- Unreal client code;
-- binaries, libraries, PDBs, IDE caches, and build intermediates;
-- raw logs, credentials, personal paths, and the original Git history.
+- 강의 예제 코드 및 비공개 ServerCore
+- Protobuf와 RapidXML 원본 및 생성 결과물
+- Unreal 클라이언트 코드
+- 실행 파일, 라이브러리, PDB, IDE 캐시 및 빌드 중간 산출물
+- 원본 로그, 인증정보, 개인 절대 경로 및 기존 Git 이력
 
-This notice records a conservative publication boundary and is not legal advice.
+이 문서는 저작권 위험을 줄이기 위해 선택한 보수적인 공개 범위를 기록한 것으로, 법률 자문이 아닙니다.
